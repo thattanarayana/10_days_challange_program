@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Auto Screenshot Capture</title>
+</head>
+
+<body>
+    <h1>Auto Screenshot Demo</h1>
+    <pre id="output"></pre>
+    <div id="previews"></div>
+
+    <script>
+        const { ipcRenderer } = require('electron');
+
+        ipcRenderer.on("capture-result", (event, msg) => {
+            document.getElementById("output").textContent = msg;
+
+            // Show previews if screenshots exist
+            const previews = document.getElementById("previews");
+            previews.innerHTML = "";
+            msg.split("\n").forEach(line => {
+                if (line.endsWith(".png")) {
+                    const img = document.createElement("img");
+                    img.src = "file://" + line + "?t=" + new Date().getTime();
+                    img.style.maxWidth = "300px";
+                    img.style.margin = "5px";
+                    previews.appendChild(img);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

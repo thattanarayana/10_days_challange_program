@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Auto File Cleaner</title>
+</head>
+
+<body>
+    <h1>File Cleanup Result</h1>
+    <pre id="output"></pre>
+
+    <script>
+        const { ipcRenderer } = require('electron');
+        const output = document.getElementById('output');
+
+        ipcRenderer.on("result-message", (event, msg) => {
+            output.textContent = msg;
+        });
+    </script>
+</body>
+
+</html>

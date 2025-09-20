@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Front Camera Capture</title>
+</head>
+
+<body>
+    <!-- <h1>Capturing 5 Photos from Front Camera</h1> -->
+    <!-- <video id="video" width="640" height="480" autoplay></video> -->
+    <script>
+        const fs = require('fs');
+        const path = require('path');
+
+        const screenshotDir = path.join(__dirname, 'src_capture');
+        if (!fs.existsSync(screenshotDir)) fs.mkdirSync(screenshotDir);
+
+        const video = document.getElementById('video');
+
+        // Access front camera
+        navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" }, audio: false })
+            .then(stream => {
+                video.srcObject = stream;
+
+                let count = 1;
+                const interval = setInterval(() => {
+                    if (count > 5) {
+                        clearInterval(interval);
+                        stream.getTracks().forEach(track => track.stop());
+                        window.close(); // close window after capturing
+                        return;
+                    }
+
+                    const canvas = document.createElement('canvas');
+                    canvas.width = video.videoWidth || 640;
+                    canvas.height = video.videoHeight || 480;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+                    const buffer = Buffer.from(canvas.toDataURL().replace(/^data:image\/\w+;base64,/, ""), 'base64');
+                    fs.writeFileSync(path.join(screenshotDir, `photo_${count}.png`), buffer);
+
+                    console.log(`Photo ${count} captured`);
+                    count++;
+                }, 1000); // 1 photo per second
+
+            })
+            .catch(err => console.error("Error accessing camera:", err));
+    </script>
+</body>
+
+</html>
