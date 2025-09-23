@@ -1,41 +1,67 @@
-How setup electron project
+How to Set Up an Electron Project
 
-1. Required softwares (VS IDE code editor, nodejs and GIT)
+This guide explains, step by step, how to set up an Electron project. It’s written in simple language so that even beginners or non-technical readers can follow along.
 
-2. Add Environment Variables (User variables & System Variables) of nodejs & GIT
-Note :- 1& steps are one time to setup eletron project
+1. Install Required Software (One-time setup)
+Before starting, make sure you have these installed on your computer:
+Visual Studio Code (VS Code) → Code editor where you’ll write and run your project.
+Node.js → A runtime environment for running JavaScript outside the browser.
+Git → A version control tool used for managing code.
+👉 These need to be installed only once.
 
-Create seprate folder for projet 
-Open created project folder in VS code -> open Terminal
+2. Add Environment Variables (One-time setup)
+After installing Node.js and Git, add them to your system’s Environment Variables.
+This step allows you to run commands like node, npm, and git from any folder in the terminal.
+👉 Just like saving a shortcut, so your computer always knows where Node.js and Git are located.
 
-Run "npm init -y"
-Above cmd is a Node.js / npm shortcut for quickly creating a new package.json file with default settings. 
-What it does
-npm init → Starts the process of creating a package.json file, which stores metadata about your project (name, version, dependencies, scripts, etc.).
--y or --yes → Automatically answers "yes" to all prompts, so npm uses its default values instead of asking you questions interactively.
+3. Create a Project Folder
+Create a new folder anywhere on your computer (for example: MyElectronApp).
+Open this folder in VS Code.
+Inside VS Code, open the Terminal.
 
-Run "nmp install electron --save-dev"
-npm        → The Node Package Manager, used to install and manage JavaScript packages.
-install    → Tells npm to download and add a package to your project.
-electron   → The name of the package you want to install. Electron is a framework for building cross-platform desktop apps using JavaScript, HTML, and CSS.
---save-dev → Installs the package as a development dependency. This means:
-It will be listed under "devDependencies" in your package.json.
-It’s intended for tools you need only during development, not in production (e.g., build tools, testing frameworks, compilers).
+4. Initialize the Project
+Run this command in the terminal:
+cmd = npm init -y
+What this does:
+Creates a file called package.json.
+This file stores information about your project (name, version, scripts, and dependencies).
+The -y flag means "use all default settings" (so it won’t ask you questions).
 
-Run "npm install electron@latest" 
-This is telling npm (Node Package Manager) to install the most recent stable version of Electron into your project.
+5. Install Electron
+Run the following commands:
+cmd = npm install electron --save-dev
+👉 This installs Electron and saves it as a development dependency in your project.
+--save-dev means Electron is only needed while developing the project, not for production use.
+To make sure you always have the latest version, you can also run:
+cmd = npm install electron@latest
 
-Run "npm start"
-is a shortcut for running the start script defined in your project’s package.json file.
+6. Run Your Electron App
+To start the project, run:
+cmd = npm start
+This will run the start script defined in your package.json.
 
-Note:- 
-I have created multipule task like delete, capture screenshot & take photo to run that particule file update packages.json with file name in below parameters "main": "file_name to execute requied file"
+7. Running Different Files (Optional)
+In this project, I created multiple tasks:
+Capture a photo using webcam.
+Capture a screenshot of the screen.
+Delete files inside a folder.
+To run a specific file, update your package.json like this:
 {
-
-  "name": "seasoure",
+  "name": "seashore",
   "version": "1.0.0",
   "description": "",
-  "main": "src_video/main.js",
+  "main": "src_video/main.js",   ← Update this line with the file you want to run
   "scripts": {
     "start": "electron ."
   }
+}
+
+✅ Summary
+Install VS Code, Node.js, Git (one-time setup).
+Add them to Environment Variables.
+Create a project folder and initialize it with npm init -y.
+Install Electron using npm install electron --save-dev.
+Start your project with npm start.
+Update the main field in package.json if you want to run a different file (photo capture, screenshot, or delete files).
+
+This documentation is beginner-friendly and also demonstrates my ability to explain technical concepts clearly — an important skill for teamwork and communication in any job.
