@@ -1,11 +1,33 @@
-Day 01                          19-Sept-2025       
+Day 01 – 19 Sept 2025
 
-I have praticed basic electron task whcih capture screen shot, phots and delete files under particlar folder
-capture_photo.html (This html file code is used to capture photo using laptop webcam realted to capture_photo.js )
-capture_photo.js (This js file code is used to capture photo using laptop webcam )
-deletefilesinfolder.html (This html file code is used to delete files in particular folder related to deletefilesinfolder.js)
-deletefilesinfolder.js (This js file code is used to delete files in particular folder)
-screen_shot_captur.html (This html file code is used to delete files in particular folder related to screen_shot_captur.js)
-screen_shot_captur.js (This js file code is used to take screen shots)
-(package.json & package-lock.json are setup files to run electron project)
-I have menintioned indetail steps how set up electron projects in setup_electron.md
+As part of my Electron learning practice, I worked on a few basic tasks that demonstrate how to use Electron for system-level operations such as capturing photos, taking screenshots, and deleting files from a folder.
+
+Project Files
+
+capture_photo.html – HTML file for capturing a photo using the laptop webcam (works with capture_photo.js).
+
+capture_photo.js – JavaScript file that contains the logic for capturing a photo using the webcam.
+
+deletefilesinfolder.html – HTML file for deleting files in a specific folder (works with deletefilesinfolder.js).
+
+deletefilesinfolder.js – JavaScript file that handles deleting files inside a given folder.
+
+screen_shot_captur.html – HTML file for taking screenshots (works with screen_shot_captur.js).
+
+screen_shot_captur.js – JavaScript file that contains the logic for capturing screenshots.
+
+package.json & package-lock.json – Setup files required to run the Electron project.
+
+setup_electron.md – A step-by-step guide I created for setting up an Electron project.
+
+Summary
+
+This small project helped me practice:
+
+Capturing images using a webcam.
+
+Taking desktop screenshots.
+
+Deleting files inside a folder.
+
+Setting up and running a basic Electron application.
