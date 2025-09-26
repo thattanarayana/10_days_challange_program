@@ -1,6 +1,13 @@
-10_Days_Challenge_Program to Become a Malware Analyst
+10 Days Challenge Program – Becoming a Malware Analyst
 
-I have taken up a 10-day challenge program to become a Malware Analyst.
-This repository is dedicated to storing course materials, practice scripts, and related documents for this special program.
+I’ve taken on a 10-day challenge to sharpen my skills and work towards becoming a Malware Analyst.
 
-Within the repository, I’ve created a folder named "Test_Scripts_&_Documents_for_SpecialCourse", which contains subfolders organized by day. Each subfolder includes my daily learnings, practice exercises, and code samples.
+This repository serves as a central hub for:
+
+Course materials
+
+Practice scripts
+
+Reference documents
+
+Inside, you’ll find a dedicated folder named Test_Scripts_&_Documents_for_SpecialCourse. It is structured into subfolders for each day of the challenge. Every subfolder documents my daily learnings, exercises, and code samples, making it easy to track progress and revisit key concepts.
