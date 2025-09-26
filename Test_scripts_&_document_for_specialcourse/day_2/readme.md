@@ -1,6 +1,15 @@
-Day 2     20-Sept-2025
-2nd day I have learned about new concept google fire base. Whihc helps us to build application on real time database.
-I have created new project to implement the concepts which i have implemented on day_1. After using realtime database configurations I have rewrite my hole code like recive command's from firebase and implete in electron. 
-After the testing the code I have rewite the code which work contuniesloy recive intout and execute unitll I remminate the program exectuion 
+🚀 Day 2 – 20th Sept 2025
 
+On the second day of my learning journey, I explored Google Firebase – a powerful tool that helps in building applications with a real-time database.
 
+I extended the project I started on Day 1 by integrating Firebase. This allowed me to receive commands directly from Firebase and execute them inside my Electron app.
+
+After configuring the real-time database, I rewrote my code to continuously listen for input and execute commands until the program is terminated.
+
+🔧 Project Structure
+
+index.html → Contains HTML and JavaScript code that runs on the user’s device (no direct output is shown).
+
+main.js → The core logic of the project. Handles Firebase configuration, database connections, and executes commands received.
+
+package.json & package-lock.json → Define required libraries, dependencies, and scripts to run the Electron project.
