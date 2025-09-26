@@ -1,5 +1,6 @@
-# 10_days_challange_program to became Malware analyst 
-As part of to became malware analyst. I have taken 10 days program challange. 
-This repository is used to store special 10 days program course, practice scripts and related documents.  
-In this repository i have created folder name "Test_scripts_&_document_for_specialcourse" with subfolders to store day by day learings and pratice codes.
+10_Days_Challenge_Program to Become a Malware Analyst
 
+I have taken up a 10-day challenge program to become a Malware Analyst.
+This repository is dedicated to storing course materials, practice scripts, and related documents for this special program.
+
+Within the repository, I’ve created a folder named "Test_Scripts_&_Documents_for_SpecialCourse", which contains subfolders organized by day. Each subfolder includes my daily learnings, practice exercises, and code samples.
