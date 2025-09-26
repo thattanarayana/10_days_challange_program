@@ -1,0 +1,17 @@
+{
+  "name": "parent_child_app_project",
+  "version": "1.0.0",
+  "description": "electron parent_child_app_project",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^38.1.2",
+    "firebase": "^12.3.0",
+    "fs-extra": "^11.3.2"
+  }
+}
