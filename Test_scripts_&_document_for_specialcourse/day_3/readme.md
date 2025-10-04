@@ -10,3 +10,4 @@ main.js → The core logic of the project. Handles Firebase configuration, datab
 
 package.json & package-lock.json → Define required libraries, dependencies, and scripts to run the Electron project.
 
+admin.py -> contains python script using service account crediantional python script estblashe connection to firebase to give commands to control the main.js
