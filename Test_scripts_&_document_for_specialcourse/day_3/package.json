@@ -1,0 +1,21 @@
+{
+  "name": "seasoure_server",
+  "version": "1.0.0",
+  "description": "Remote command execution server with screenshots, webcam photos, folder/image scans",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^38.2.0"
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "firebase": "^12.3.0",
+    "form-data": "^4.0.4",
+    "node-webcam": "^0.8.2"
+  }
+}
